@@ -14,3 +14,8 @@ def test_load_json():
         '''load_json function returns response.'''
         requester = GetRequester(URL)
         assert(requester.load_json() == CONVERTED_DATA)
+
+def test_get_response():
+    '''get_response_body function returns response.'''
+    requester = GetRequester(URL)
+    assert requester.get_response_body().encode('utf-8') == JSON_STRING
